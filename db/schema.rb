@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_31_164633) do
+ActiveRecord::Schema.define(version: 2022_05_31_215337) do
 
   create_table "applicants", force: :cascade do |t|
     t.string "name"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2022_05_31_164633) do
     t.string "breed"
     t.integer "age"
     t.string "trait"
+    t.string "image"
   end
 
 end
