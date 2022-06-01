@@ -26,7 +26,8 @@ dog7 = Dog.create(name: "Polkadot", breed:"Dalmatian", age: 6, trait: "Tall", im
         job: Faker::Job.title,
         city: Faker::Address.city,
         dog_id: Dog.all.sample.id,
-        pets_owned: rand(1..10)
+        pets_owned: rand(1..10),
+        image: "https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png"
     )
 end
 # Seed your database here
