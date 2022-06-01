@@ -16,7 +16,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post "/dogs" do
-    dog = Dog.create(name: params[:name], breed: params[:breed], age: params[:age], trait: params[:trait])
+    dog = Dog.create(name: params[:name], breed: params[:breed], age: params[:age], trait: params[:trait], image: params[:image])
     dog.to_json
   end
   
