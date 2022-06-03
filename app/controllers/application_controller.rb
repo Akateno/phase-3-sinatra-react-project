@@ -8,6 +8,18 @@ class ApplicationController < Sinatra::Base
     dogs.to_json
   end
 
+  patch '/dogs/:id' do
+    dog = Dog.find(params[:id])
+    dog.update(
+      name: params[:names],
+      breed: params[:breeds],
+      age: params[:ages], 
+      trait: params[:traits],
+      image: params[:images]
+    )
+    dog.to_json
+  end
+
   get '/applicants' do
     applicant = Applicant.all
     applicant.to_json(include: {
